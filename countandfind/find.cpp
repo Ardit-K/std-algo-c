@@ -11,7 +11,7 @@ Email: arditkoti7192@gmail.com
 int main()
 {
     vector<int> nums{1, 2, 3, 4, 5, 6, 7};
-    auto isEven = [](int n){return n%2 == 0;};
+    auto isEven = [](int n){return n % 2 == 0;};
     int num = 8;
     auto numIt = find(begin(nums), end(nums), num);
     if(*numIt){
@@ -22,7 +22,11 @@ int main()
     }
     
     // Finds first even number in collection
-    auto it = find_if(begin(nums), end(nums), isEven);
-    cout << "First even number in vector: " << *it << endl;
+    auto evenIt = find_if(begin(nums), end(nums), isEven);
+    cout << "First even number in vector: " << *evenIt << endl;
+
+    // Finds first odd number in collection
+    auto oddIt = find_if_not(begin(nums), end(nums), isEven);
+    cout << "First odd number in vector: " << *oddIt << endl;
     return 0;
 }

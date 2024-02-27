@@ -24,7 +24,7 @@ int main()
     // Finds first even number in collection
     auto evenIt = find_if(begin(nums), end(nums), isEven);
     cout << "First even number in vector: " << *evenIt << endl;
-
+    
     // Finds first odd number in collection
     auto oddIt = find_if_not(begin(nums), end(nums), isEven);
     cout << "First odd number in vector: " << *oddIt << endl;
